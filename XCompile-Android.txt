@@ -14,7 +14,7 @@ SET(CMAKE_CXX_COMPILER "${HOST}-g++")
 SET(CMAKE_RC_COMPILER "${HOST}-windres")
 
 # here is the target environment located
-SET(CMAKE_FIND_ROOT_PATH "SET THIS TO THE NDK TOOLCHAIN'S INSTALL PATH")
+SET(CMAKE_FIND_ROOT_PATH "$ANDROID_NDK")
 
 # here is where stuff gets installed to
 SET(CMAKE_INSTALL_PREFIX "${CMAKE_FIND_ROOT_PATH}" CACHE STRING "Install path prefix, prepended onto install directories." FORCE)
