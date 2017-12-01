@@ -1,3 +1,20 @@
+Note
+==============
+
+I made this fork to make it easier to compile for more android platforms.
+
+The approach I am using is highly inspired by this fork of openal-soft https://github.com/JogAmp/openal-soft, however that fork hasn't been updated for many years, and seems to have been forked off for android r8d, which is long ago now.
+
+I have resorted to hacking CMakeList.txt and XCompile-Android.txt to make it work, and I don't know much about cmake and a bit pressed for time (aren't everybody?), so my solution ended up a bit hacky. Someone who actually knows cmake, should have look at it some day.
+
+I have added an extra file in cmake called toolchain.android.cmake. This is almost verbatim copied from https://github.com/JogAmp/openal-soft/blob/master/cmake/toolchain.android.cmake, except I have added support for intel 64bit cpus.
+
+To build do
+
+cd build
+cmake .. -DCMAKE_TOOLCHAIN_FILE=../cmake/toolchain.android.cmake -DANDROID_API_LEVEL=<LEVEL>
+
+
 Source Install
 ==============
 
